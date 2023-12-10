@@ -19,7 +19,9 @@ export class AuthService {
       throw new HttpException('Username does not exists', 409);
     }
 
-    const isPasswordValid = await bcrypt.compare(singInDto.password, user.password);
+    const usrWithPassword = await this.usersService.findOneWithPasswordById(user.id);
+
+    const isPasswordValid = await bcrypt.compare(singInDto.password, usrWithPassword.password);
 
     if (!isPasswordValid) {
       throw new UnauthorizedException();

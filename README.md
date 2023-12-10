@@ -78,10 +78,10 @@ Nest is [MIT licensed](LICENSE).
 Proyecto BASE desarrollado en nestjs, caracteristicas:
 - Authenticacion con JWT.
 - Login And Register. (SingIn and SingUp). 
-	ALCLARACIÓN: El login demanda un "username" y una "password", puede editarse para requerir un "email" and "pasword" o "email", "username" and "pasword". Para el registro de usuarios se demanda el "email", "username" and "password", tambien puede editarse a gusto, por ejemplo para requerir una password extra y comparar igualdad entre ellas.
+	ALCLARACIÓN: El login demanda un "username" y una "password", puede editarse para requerir un "email" y "pasword" o "email", "username" and "pasword". Para el registro de usuarios se demanda el "email", "username" and "password", tambien puede editarse a gusto, por ejemplo para requerir una password extra y comparar igualdad entre ellas.
 - TypeOrm para la creacion de entidad usuario y base de datos MySql. La base de datos puede cambiarse en "app.module.ts".
 - La entidad usuario tambien puede ser ajustada en src/users/entities/user.entity.ts
-- Por defecto los endpoints solo pueden ser consumidos con peticiones que posean JWT, es decir necesitan por defecto autorizacion. Escepto los endpoints de Login y Registro los cuales tienen el decorador @Public. Para generar endpoints que no precisen autorizacion recuerde utilzar el decorador @Public.
+- Por defecto los endpoints solo pueden ser consumidos con peticiones que posean JWT, es decir necesitan por defecto autorizacion. Excepto los endpoints de Login y Registro los cuales tienen el decorador @Public. Para generar endpoints que no precisen autorizacion recuerde utilzar el decorador @Public.
 
 Paquetes:
 TypeOrm (Orm)

@@ -54,6 +54,12 @@ export class UsersService {
     return this.userRepository.findOneBy({username});
   }
 
+  async findOneWithPasswordById(id: number) {
+    return await this.userRepository.findOne({
+      where: {id}, 
+      select: ['password']
+    });
+  }
 
   //findByJwt(payload: any) {
   //  return this.userRepository.findOneBy({id: payload.sub});
